@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/pf_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/product_feature"
+        android:textSize="@dimen/text_heading"
+        android:textColor="@android:color/black"
+        android:padding="@dimen/ten_dp"/>
+
+    <ProgressBar
+        android:id="@+id/pf_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pf_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/pf_title"
+        android:paddingStart="@dimen/ten_dp"
+        android:paddingEnd="@dimen/ten_dp"
+        android:background="@drawable/product_featue_box_shape"/>
+
+</RelativeLayout>

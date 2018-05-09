@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1">
+    <TextView
+        android:id="@+id/pf_child_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.99"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/ten_dp"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/text_heading"
+        android:text="@string/product_feature"/>
+    <View
+        android:id="@+id/pf_child_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_height"
+        android:layout_weight="0.01"
+        android:background="@color/colorPrimaryDark"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>
