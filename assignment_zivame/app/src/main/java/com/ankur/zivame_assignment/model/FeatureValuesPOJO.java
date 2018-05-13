@@ -12,6 +12,26 @@ public class FeatureValuesPOJO {
     private boolean isDescription;
     private boolean isSelect;
 
+    public int getDescriptionFor() {
+        return descriptionFor;
+    }
+
+    public void setDescriptionFor(int descriptionPos) {
+        this.descriptionFor = descriptionPos;
+    }
+
+    private int descriptionFor;
+
+    public int getDescriptionPosition() {
+        return descriptionPosition;
+    }
+
+    public void setDescriptionPosition(int descriptionPosition) {
+        this.descriptionPosition = descriptionPosition;
+    }
+
+    private int descriptionPosition;
+
     public String getName() {
         return name;
     }

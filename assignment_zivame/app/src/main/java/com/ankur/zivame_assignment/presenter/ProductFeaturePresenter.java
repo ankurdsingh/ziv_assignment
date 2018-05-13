@@ -103,7 +103,7 @@ public class ProductFeaturePresenter {
             super.onPostExecute(featuresList);
             //Rearranging list for showing/hiding divider
             for (int listIndex =0 ; listIndex<featuresList.size() ; listIndex++){
-                if((listIndex+1)%PRODUCT_FEATURE_GRID_COLUMNS==0){
+                if((listIndex+1)%PRODUCT_FEATURE_GRID_COLUMNS==0 || (listIndex+1)==featuresList.size()){
                     featuresList.get(listIndex).setDivider(false);
                 }else {
                     featuresList.get(listIndex).setDivider(true);

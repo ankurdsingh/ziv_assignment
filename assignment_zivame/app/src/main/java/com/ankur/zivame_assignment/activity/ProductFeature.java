@@ -40,18 +40,24 @@ public class ProductFeature extends AppCompatActivity implements ProgressBarCall
         initView();
     }
 
+    /**
+     * <p>init- method to initialize all data member of the class</p>
+     */
     private void init() {
         featureDataList = new ArrayList<>();
         productFeaturePresenter = new ProductFeaturePresenter(ProductFeature.this);
     }
 
+    /**
+     * <p>initView - method to initialize add view related variable in activity</p>
+     */
     private void initView() {
         progressBarLoadingFeture = findViewById(R.id.pf_progress_bar);
         RecyclerView recyclerViewProductFeature = findViewById(R.id.pf_recycler_view);
-        featuresAdapter = new ProductFeatureAdapter(ProductFeature.this,featureDataList);
-        recyclerViewProductFeature.setAdapter(featuresAdapter);
         GridLayoutManager layoutManager = new GridLayoutManager(ProductFeature.this,PRODUCT_FEATURE_GRID_COLUMNS);
         recyclerViewProductFeature.setLayoutManager(layoutManager);
+        featuresAdapter = new ProductFeatureAdapter(ProductFeature.this,featureDataList);
+        recyclerViewProductFeature.setAdapter(featuresAdapter);
         productFeaturePresenter.getData();
     }
 
